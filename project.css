@@ -1,4 +1,282 @@
 @charset "utf-8";
+/* Reset Styles */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+}
+/* Normalize Styles */
+html {
+  min-height: 100%;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+b,
+strong {
+  font-weight: bold;
+}
+i,
+em {
+  font-style: italic;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+/* If making webviews for native app:
+
+input, select, textarea, a, button {
+    -webkit-tap-highlight-color: rgba(255,255,255,0); 
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+*/
+
+@charset "utf-8";
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 .clearfix:after {
   content: " ";
   visibility: hidden;
@@ -6,112 +284,444 @@
   height: 0;
   clear: both;
 }
-.LoginCtrl {
-  background: #2c3942;
+a {
+  color: #666699;
+  cursor: pointer;
 }
-/* Application Styles */
-.row-container {
+h1 {
+  color: #999999;
+  font-size: 36px;
+  margin-bottom: 36px;
+}
+h2 {
+  font-size: 36px;
+  margin-bottom: 52px;
+}
+p {
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 35px;
+}
+button,
+.btn {
+  color: #FFFFFF;
+  padding: 16px 20px;
+  background: #999999;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.invalid button,
+.invalid .btn {
+  opacity: 0.5;
+  cursor: default;
+}
+header {
+  height: 83px;
+  line-height: 83px;
+  padding: 0 5%;
+  background: #999999;
+  overflow: hidden;
+}
+header a.logo {
+  float: left;
+  width: 113px;
+  height: 100%;
+  line-height: 83px;
+  margin-right: 50px;
+}
+header a.logo img {
   width: 100%;
+  vertical-align: middle;
 }
-.row-container.header {
-  padding: 30px 0;
-  background: #2c3942;
+header nav {
+  float: left;
 }
-.row-container.header h1 {
+header nav a {
+  color: #FFFFFF;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-right: 34px;
+}
+header nav a:last-child {
+  margin-right: 0;
+}
+header #account-nav {
+  float: right;
+  margin-top: 20px;
+  line-height: 18px;
+}
+header #account-nav .btn {
+  text-transform: uppercase;
+  background: #333333;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  margin-right: 1px;
+  float: left;
+}
+header #account-nav .btn:first-child {
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+header #account-nav .btn:last-child {
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-right: 0;
+}
+main {
+  min-height: 300px;
+}
+footer {
+  height: 124px;
+  padding: 0 5%;
+  background: #333333;
+  overflow: hidden;
+}
+footer a.download-btn {
   float: left;
   color: #FFFFFF;
-  margin: 0;
+  padding: 16px 20px;
+  margin-top: 28px;
+  background: #999999;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
-.row-container.header nav {
+footer .disabled-btn {
+  float: left;
+  margin-top: 28px;
+}
+footer .right {
   float: right;
+  font-size: 12px;
+  margin-top: 45px;
 }
-.row-container .row {
-  max-width: 1020px;
+footer .right nav {
+  display: inline-block;
+}
+footer .right a,
+footer .right span {
+  color: #999999;
+  font-size: 13px;
+  margin: 5px;
+}
+footer .right a:hover {
+  text-decoration: underline;
+}
+form li {
+  display: block;
+  padding: 10px 0;
+}
+form li input,
+form li select {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #dddddd;
+}
+form li input:focus,
+form li select:focus {
+  border-color: #999999;
+}
+.other-actions a {
+  display: inline-block;
+  color: #999999;
+  margin-left: 20px;
+}
+.disabled-btn {
+  width: 184px;
+  height: 48px;
+  background: #999999;
+  opacity: 0.5;
+  color: #FFFFFF;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  line-height: 48px;
+  border: 0;
+  cursor: default;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.disabled-btn:focus {
+  outline: none;
+}
+.row-container {
+  display: block;
+  width: 100%;
+}
+.row-container.show-mobile {
+  display: none;
+}
+.row {
+  display: block;
+  max-width: 960px;
   margin: 0 auto;
 }
-.row-container .row.login {
-  width: 500px;
-  background: #FFFFFF;
-  padding: 20px;
-  margin: 200px auto 0;
-  border-radius: 5px;
+.hollow-btn {
+  font-size: 12px;
+  color: #999999;
+  padding: 10px 16px;
+  border: 1px solid #999999;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
-.row-container .row.login #login button {
+.hollow-btn:hover {
+  color: #FFFFFF;
+  background: #999999;
+}
+/* Default Headers */
+.hero {
+  height: 500px;
+  padding-top: 42px;
+  background: #ffffff url("http://placehold.it/1250x500&text=Hero+Image") no-repeat center;
+}
+.hero .hero-image,
+.hero .hero-content {
   float: left;
+  width: 50%;
 }
-.row-container .row.login #login a {
-  float: right;
-  margin: 8px 0 0 0;
-}
-.row-container .row .table-controls {
+.hero .hero-image img {
+  display: block;
   width: 100%;
-  padding: 20px 0;
+  max-width: 450px;
 }
-.row-container .row .table-controls input {
+.hero .hero-content {
+  padding-top: 12%;
+  padding: 12% 5% 0 0;
+  text-align: center;
+}
+.hero .hero-content .hero-actions {
+  width: 320px;
+  margin: 0 auto;
+}
+.hero .hero-content .hero-actions a {
   float: left;
+  height: 46px;
 }
-.row-container .row .table-controls button {
-  float: right;
+.hero .hero-content .hero-actions a:first-child {
+  margin-right: 10px;
 }
-.row-container .row table {
-  width: 100%;
+.hero .hero-content .hero-actions a.app-store-btn,
+.hero .hero-content .hero-actions a.play-store-btn {
+  position: relative;
+  width: 155px;
+  background-size: cover;
 }
-.row-container .row table thead {
-  border-bottom: 1px solid #333333;
+.hero .hero-content .hero-actions a.app-store-btn {
+  background: url("/build/images/app-store-download.svg") no-repeat;
 }
-.row-container .row table thead tr {
-  background: #FFFFFF;
+.hero .hero-content .hero-actions a.play-store-btn {
+  background: url("/build/images/play-store-download.svg") no-repeat;
 }
-.row-container .row table thead tr th {
-  font-weight: bold;
-  text-align: left;
-  padding: 20px 0 20px 20px;
-  cursor: pointer;
+.summary {
+  color: #FFFFFF;
+  text-align: center;
+  background: #999999;
 }
-.row-container .row table thead tr:hover {
-  background: #FFFFFF;
+.summary .row {
+  max-width: 490px;
+  padding: 5% 10%;
 }
-.row-container .row table tr {
-  border-bottom: 1px solid #333;
+.splash,
+.splash-alternate {
+  background: #999999;
 }
-.row-container .row table tr:nth-child(even) {
-  background: #f1f1f1;
+.splash .row,
+.splash-alternate .row {
+  padding: 5%;
 }
-.row-container .row table tr:hover {
-  background: #cfcfcf;
-}
-.row-container .row table tr td {
-  padding: 20px 0 20px 20px;
-}
-.row-container .row table tr i {
-  cursor: pointer;
-}
-.row-container .row input {
+.splash .row h2,
+.splash-alternate .row h2 {
   display: block;
+  color: #333333;
+  text-align: center;
 }
-/* ngDialog Overrides */
-.ngdialog-theme-default.item-form .ngdialog-content {
-  width: 800px;
+.splash .row .featured-item,
+.splash-alternate .row .featured-item {
+  float: left;
+  width: 28%;
+  max-width: 263px;
+  text-align: center;
+  margin-right: 8%;
 }
-.ngdialog-theme-default.item-form .ngdialog-content h2 span {
-  font-weight: bold;
+.splash .row .featured-item:last-child,
+.splash-alternate .row .featured-item:last-child {
+  margin-right: 0;
 }
-.ngdialog-theme-default.item-form .ngdialog-content label {
-  width: 48%;
-  margin: 0 1% 3% 0;
-}
-.ngdialog-theme-default.item-form .ngdialog-content label input {
+.splash .row .featured-item img,
+.splash-alternate .row .featured-item img {
   width: 100%;
+  margin-bottom: 42px;
+  -webkit-box-shadow: 2px, 5px, 8px, rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 2px, 5px, 8px, rgba(0, 0, 0, 0.23);
+  box-shadow: 2px, 5px, 8px, rgba(0, 0, 0, 0.23);
 }
-.ngdialog-theme-default.item-form .ngdialog-content label span {
+.splash .row .featured-item p,
+.splash-alternate .row .featured-item p {
+  color: #333333;
+}
+.splash {
+  background: #FFF;
+}
+.splash .row h2 {
+  color: #999999;
+}
+.splash .row h3 {
+  font-size: 21px;
+}
+.splash .row p {
   display: block;
+  width: 100%;
+  color: #333333;
+  font-size: 16px;
+  text-align: center;
+  margin: 0 auto;
 }
-.ngdialog-theme-default.item-form .ngdialog-content .form-controls {
-  padding: 20px;
-  border-top: 1px solid #333333;
+.splash .row .featured-item img {
+  margin-bottom: 18px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
-.ngdialog-theme-default.item-form .ngdialog-content .form-controls button {
-  float: right;
-  padding: 5px;
-  margin: 0 10px 0 0;
+@media screen and (max-width: 1180px) {
+  header.promo .promo-center-container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 735px) {
+  header a.logo {
+    margin-right: 20px;
+  }
+  header nav a {
+    font-size: 11px;
+    margin-right: 10px;
+  }
+  footer nav.social {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 615px) {
+  .hero {
+    height: 268px;
+    background-position: -560px;
+  }
+  .hero.show-mobile {
+    height: 350px;
+    display: block;
+    padding-top: 20px;
+    background: none;
+  }
+  .hero.show-mobile .hero-content h1 {
+    margin-bottom: 20px;
+  }
+  .hero.show-mobile .hero-content .hero-actions {
+    width: 100%;
+  }
+  .hero.show-mobile .hero-content .hero-actions a {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  .hide-mobile {
+    display: none;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  p,
+  .row-container.legal ul li {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  header {
+    padding: 0 5%;
+  }
+  header nav {
+    display: none;
+  }
+  .hero .row {
+    position: relative;
+    height: 650px;
+  }
+  .hero .row .hero-image {
+    display: block;
+    float: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+  }
+  .hero .row .hero-content {
+    width: 100%;
+    float: none;
+    padding: 5% 10%;
+  }
+  .splash .row {
+    padding: 5% 0;
+  }
+  .splash .row .featured-item {
+    width: 80%;
+    float: none;
+    margin: 0 auto;
+  }
+  .splash .row .featured-item:last-child {
+    margin: 0 auto;
+  }
+  .splash-alternate .row .featured-item img {
+    margin-bottom: 18px;
+  }
+  footer {
+    height: 158px;
+  }
+  footer .row {
+    padding-top: 20px;
+  }
+  footer .row a.download-btn,
+  footer .row .disabled-btn {
+    float: none;
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  footer .row nav {
+    float: none;
+    text-align: center;
+    margin-top: 20px;
+  }
+  footer .row nav.social {
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+  }
+  footer .row nav.social a {
+    display: inline-block;
+    float: none;
+  }
+  footer .row nav a,
+  footer .row nav span {
+    font-size: 10px;
+    margin: 0 5px;
+  }
 }
